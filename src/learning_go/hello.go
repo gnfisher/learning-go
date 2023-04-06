@@ -1,7 +1,7 @@
-package main
+package learning_go
 
 import "fmt"
 
-func main() {
+func SayHello() {
 	fmt.Println("Hello, World!")
 }
