@@ -12,4 +12,11 @@ import "learning_go"
 
 func main() {
 	learning_go.SayHello()
+	learning_go.ChapterTwo()
+	learning_go.SliceAppend()
+	learning_go.SliceExpression()
+	learning_go.SliceArrayExp()
+	learning_go.StringSlices()
+	learning_go.Maps()
+	learning_go.Structs()
 }
