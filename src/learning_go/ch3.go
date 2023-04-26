@@ -90,12 +90,19 @@ func StringSlices() {
 
 func Maps() {
 	teams := map[string][]string{
-		"Orcas":   []string{"Fred", "Ralph", "Bijou"},
-		"Lions":   []string{"Sarah", "Peter", "Billie"},
-		"Kittens": []string{"Waldo", "Raul", "Ze"},
+		"Orcas":   {"Fred", "Ralph", "Bijou"},
+		"Lions":   {"Sarah", "Peter", "Billie"},
+		"Kittens": {"Waldo", "Raul", "Ze"},
 	}
 
 	fmt.Println(teams)
+
+	for k, v := range teams {
+		fmt.Println(k)
+		for _, v := range v {
+			fmt.Println(v)
+		}
+	}
 
 	m := map[string]int{
 		"hello": 5,

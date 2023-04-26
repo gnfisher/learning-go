@@ -19,4 +19,6 @@ func main() {
 	learning_go.StringSlices()
 	learning_go.Maps()
 	learning_go.Structs()
+
+	learning_go.Play()
 }
