@@ -12,12 +12,27 @@ func TestPointerInstanceIsNotMutable(t *testing.T) {
 
   tryToMutatePointerInstance := func(s *string){
     x := "New String"
-    s  = &x // Try to assign the pointer we passed in to a new pointer instance
+
+    // Try to assign the pointer we passed in to a new pointer instance.
+    s  = &x 
   }
 
   x := "Hello"
   tryToMutatePointerInstance(&x)
 
+  // See that we didn't actually change anything
   require.Equal(t, "Hello", x)
+
+  // But we can mutate the memory it points to
+  mutateWhatItPointsTo := func(s *string){
+    // Dereferencing. We're putting "New String" in the memory location that the passed in pointer
+    // pointed to.
+    *s = "New String"
+  }
+
+  mutateWhatItPointsTo(&x)
+
+  // Now we've mutated things.
+  require.Equal(t, "New String", x)
 }
 
