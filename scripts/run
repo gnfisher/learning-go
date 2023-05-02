@@ -1,0 +1,3 @@
+#!/bin/bash
+
+go run cmd/learning_go/main.go
