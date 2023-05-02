@@ -45,3 +45,4 @@ func pointerTest(p *human) {
 	// 	LastName:  "Aguel",
 	// }
 }
+

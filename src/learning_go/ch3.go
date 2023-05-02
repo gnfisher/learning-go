@@ -81,7 +81,6 @@ func StringSlices() {
 	fmt.Println(len(e))
 	var b2 byte = 'y'
 	var r rune = 'x'
-	fmt.Println(string(116))
 	fmt.Println(b2)
 	fmt.Println(string(b2))
 	fmt.Println(r)
