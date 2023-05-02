@@ -21,4 +21,6 @@ func main() {
 	learning_go.Structs()
 
 	learning_go.Play()
+
+	learning_go.PointerPlay()
 }
