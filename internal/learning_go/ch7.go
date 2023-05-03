@@ -9,6 +9,12 @@ type Team struct {
 	Players []string
 }
 
+type Class Team
+
+type Game struct {
+	Name string
+}
+
 func (t *Team) AddPlayer(name string) (err error, val bool) {
 	if t == nil {
 		err = errors.New("team is nil")
@@ -33,4 +39,12 @@ func (t *Team) RemovePlayer(name string) {
 			break
 		}
 	}
+}
+
+func (t *Team) toClass() Class {
+	return Class(*t)
+}
+
+func (t *Team) toGame() Game {
+	return Game{Name: t.Name}
 }
