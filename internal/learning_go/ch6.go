@@ -26,6 +26,12 @@ func PointerPlay() {
 	}
 	fmt.Println(ns)
 
+	ds := names{}
+	if ds.LastName == nil {
+		fmt.Println("It is nil")
+	}
+	fmt.Println("nil pointers", ds)
+
 	g := human{
 		FirstName: "Greg",
 		LastName:  "Fisher",
@@ -45,4 +51,3 @@ func pointerTest(p *human) {
 	// 	LastName:  "Aguel",
 	// }
 }
-
