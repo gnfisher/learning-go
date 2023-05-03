@@ -1,10 +1,17 @@
 package main
 
 import (
+	"fmt"
+
+	"github.com/gnfisher/learning_go/internal/age"
 	"github.com/gnfisher/learning_go/internal/learning_go"
 )
 
 func main() {
+	err, a := age.FromInt(10)
+	if err == nil {
+		fmt.Println(a)
+	}
 	learning_go.SayHello()
 	learning_go.ChapterTwo()
 	learning_go.SliceAppend()
