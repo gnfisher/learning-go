@@ -10,8 +10,16 @@ import (
 func main() {
 	err, a := age.FromInt(10)
 	if err == nil {
-		fmt.Println(a)
+		fmt.Println(a.HowManyCandles())
 	}
+
+	err, b := age.FromInt(-1)
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println(b.HowManyCandles())
+	}
+
 	learning_go.SayHello()
 	learning_go.ChapterTwo()
 	learning_go.SliceAppend()
