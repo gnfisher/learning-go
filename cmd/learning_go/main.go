@@ -32,4 +32,13 @@ func main() {
 	learning_go.Play()
 
 	learning_go.PointerPlay()
+
+	var thing learning_go.IThing
+	inner := learning_go.InnerA{Age: 38}
+	thing = &learning_go.OuterA{
+		InnerA: inner,
+		Name:   "Greg",
+	}
+
+	fmt.Println(thing.HowOld())
 }
