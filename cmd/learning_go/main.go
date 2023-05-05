@@ -41,4 +41,9 @@ func main() {
 	}
 
 	fmt.Println(thing.HowOld())
+
+	x := make([]interface{}, 3)
+	x[0] = 1
+	x[1] = "hello"
+	fmt.Println(x)
 }
