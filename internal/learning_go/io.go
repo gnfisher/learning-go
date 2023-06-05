@@ -19,16 +19,16 @@ func CountChars(r io.Reader) (map[string]int, error) {
 			return out, nil
 		}
 
-		// Return the error if its anything else
-		if err != nil {
-			return nil, err
-		}
-
 		// Each byte into the map
 		for _, b := range buf[:n] {
 			if unicode.IsLetter(rune(b)) {
 				out[string(b)]++
 			}
+		}
+
+		// Return the error if its anything else
+		if err != nil {
+			return nil, err
 		}
 	}
 }
