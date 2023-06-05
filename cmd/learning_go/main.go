@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 
 	"github.com/gnfisher/learning_go/internal/age"
 	"github.com/gnfisher/learning_go/internal/learning_go"
@@ -46,4 +47,23 @@ func main() {
 	x[0] = 1
 	x[1] = "hello"
 	fmt.Println(x)
+
+	fmt.Println("Ch8...")
+	fmt.Println(learning_go.InterfaceIsNil())
+	learning_go.PlayWithErrors()
+
+	file, err := os.Open("go.mod")
+	if err != nil {
+		fmt.Println("There was an error opening the file")
+		return
+	}
+	defer file.Close()
+
+	m, err := learning_go.CountChars(file)
+	if err != nil {
+		fmt.Println("There was an error counting the characters")
+		return
+	}
+
+	fmt.Println(m)
 }

@@ -15,6 +15,10 @@ type Game struct {
 	Name string
 }
 
+func (t Team) Concrete() error {
+	return nil
+}
+
 func (t *Team) AddPlayer(name string) (err error, val bool) {
 	if t == nil {
 		err = errors.New("team is nil")
